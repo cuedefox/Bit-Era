@@ -1,5 +1,5 @@
 # Javascript-Learning
-In this repository, i will apply all the learned in the javascript course of coderhouse.
+In this repository, i will apply all the learned in the javascript classes of coderhouse.
 
 # Ideas desafio 1:
 - permitir al usuario elegir que juegos quiere comprar y la cantidad de unidades (si)
