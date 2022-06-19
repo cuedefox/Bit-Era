@@ -9,12 +9,10 @@ let leyen = 0;
 let ff = 0;
 let total = 0;
 let cantidadJuegos = 0;
-let entrada;
-let fin;
-while (entrada != "ESC" || fin != 0) {
-    let elegirJuegos = 0;
+let entrada = parseInt(prompt(`carrito: ${cantidadJuegos}\n¡Bienvenido a Bit Era!\nTu tienda de videojuegos Argentina de confianza\n¿Que deseas hacer?\n1.Añadir juegos al carrito\n2.Quitar juegos del carrito\n3.Ver total / Finalizar compra\nIngrese ESC para salir.`));
+while (entrada != "ESC" || entrada != "esc") {
+    let elegirJuegos;
     let unidades;
-    entrada = parseInt(prompt(`carrito: ${cantidadJuegos}\n¡Bienvenido a Bit Era!\nTu tienda de videojuegos Argentina de confianza\n¿Que deseas hacer?\n1.Añadir juegos al carrito\n2.Quitar juegos del carrito\n3.Ver total / Finalizar compra\nIngrese ESC para salir.`));
     switch(entrada) {
         case 1:
             while (elegirJuegos != 5) {
@@ -119,23 +117,23 @@ while (entrada != "ESC" || fin != 0) {
                 elegirJuegos = parseInt(prompt(`carrito: ${cantidadJuegos}\nSu precio total de videojuegos es de $${total}\nPresione:\n1.Seguir Comprando\n2.Finalizar compra.`));
                 switch(elegirJuegos) {
                     case 2:
-                        unidades = parseInt(prompt(`Usted esta llevando ${cantidadJuegos} Juegos por $${total}\nCall of Duty X ${cod}: $${multi(cod, 980)}\nGTA X ${gta}: $${multi(gta, 550)}\nLa leyenda de mateo X ${leyen}: $${multi(leyen, 1500)}\nFinal Fantasy X ${ff}: $${multi(ff, 310)}\niva: $${iva(total)}\nTotal con iva $${sumar(total, iva(total))}\nPresione:\n1.Realizar la compra en un pago\n2.Realizar la compra en 3 cuotas con 5% de interes\n3.Realizar la compra en 6 cuotas con 10% de interes\n4.Realizar la compra en 12 cuotas con 20% de interes`));
+                        unidades = parseInt(prompt(`Usted esta llevando ${cantidadJuegos} Juegos por $${total}\nCall of Duty X ${cod}: $${multi(cod, 980)}\nGTA X ${gta}: $${multi(gta, 550)}\nLa leyenda de mateo X ${leyen}: $${multi(leyen, 1500)}\nFinal Fantasy X ${ff}: $${multi(ff, 310)}\niva: $${iva(total).toFixed(2)}\nTotal con iva $${sumar(total, iva(total)).toFixed(2)}\nPresione:\n1.Realizar la compra en un pago\n2.Realizar la compra en 3 cuotas con 5% de interes\n3.Realizar la compra en 6 cuotas con 10% de interes\n4.Realizar la compra en 12 cuotas con 20% de interes`));
                         switch(unidades) {
                             case 1:
-                                alert(`Su total es de $${sumar(total, iva(total))}, ¡Gracias por su compra!`);
-                                fin = 1;
+                                alert(`Su total es de $${sumar(total, iva(total)).toFixed(2)}, ¡Gracias por su compra!`);
+                                entrada = "ESC";
                                 break;
                             case 2:
                                 alert(`Su total es de 3 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.05))), 3).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
-                                fin = 1;
+                                entrada = "ESC";
                                 break;
                             case 3:
                                 alert(`Su total es de 6 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.1))), 6).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
-                                fin = 1;
+                                entrada = "ESC";
                                 break;
                             case 4:
                                 alert(`Su total es de 12 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.2))), 12).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
-                                fin = 1;
+                                entrada = "ESC";
                                 break;
                             default:
                                 break;
@@ -146,4 +144,5 @@ while (entrada != "ESC" || fin != 0) {
             }
             break;
     }
+    entrada = parseInt(prompt(`carrito: ${cantidadJuegos}\n¡Bienvenido a Bit Era!\nTu tienda de videojuegos Argentina de confianza\n¿Que deseas hacer?\n1.Añadir juegos al carrito\n2.Quitar juegos del carrito\n3.Ver total / Finalizar compra\nIngrese ESC para salir.`));
 }
