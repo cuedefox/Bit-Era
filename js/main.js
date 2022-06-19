@@ -9,10 +9,11 @@ let leyen = 0;
 let ff = 0;
 let total = 0;
 let cantidadJuegos = 0;
-let entrada = parseInt(prompt(`carrito: ${cantidadJuegos}\n¡Bienvenido a Bit Era!\nTu tienda de videojuegos Argentina de confianza\n¿Que deseas hacer?\n1.Añadir juegos al carrito\n2.Quitar juegos del carrito\n3.Ver total / Finalizar compra\nIngrese ESC para salir.`));
-while (entrada != "ESC" || entrada != "esc") {
+let entrada;
+do {
     let elegirJuegos;
     let unidades;
+    entrada = parseInt(prompt(`carrito: ${cantidadJuegos}\n¡Bienvenido a Bit Era!\nTu tienda de videojuegos Argentina de confianza\n¿Que deseas hacer?\n1.Añadir juegos al carrito\n2.Quitar juegos del carrito\n3.Ver total / Finalizar compra\n4.Para salir.`));
     switch(entrada) {
         case 1:
             while (elegirJuegos != 5) {
@@ -121,19 +122,19 @@ while (entrada != "ESC" || entrada != "esc") {
                         switch(unidades) {
                             case 1:
                                 alert(`Su total es de $${sumar(total, iva(total)).toFixed(2)}, ¡Gracias por su compra!`);
-                                entrada = "ESC";
+                                entrada = 4;
                                 break;
                             case 2:
                                 alert(`Su total es de 3 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.05))), 3).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
-                                entrada = "ESC";
+                                entrada = 4;
                                 break;
                             case 3:
                                 alert(`Su total es de 6 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.1))), 6).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
-                                entrada = "ESC";
+                                entrada = 4;
                                 break;
                             case 4:
                                 alert(`Su total es de 12 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.2))), 12).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
-                                entrada = "ESC";
+                                entrada = 4;
                                 break;
                             default:
                                 break;
@@ -144,5 +145,4 @@ while (entrada != "ESC" || entrada != "esc") {
             }
             break;
     }
-    entrada = parseInt(prompt(`carrito: ${cantidadJuegos}\n¡Bienvenido a Bit Era!\nTu tienda de videojuegos Argentina de confianza\n¿Que deseas hacer?\n1.Añadir juegos al carrito\n2.Quitar juegos del carrito\n3.Ver total / Finalizar compra\nIngrese ESC para salir.`));
-}
+}while (entrada != 4);
