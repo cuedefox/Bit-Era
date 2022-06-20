@@ -139,9 +139,10 @@ do {
                             default:
                                 break;
                         }
-                        break;
+                        default:
+                            break;
                 }
-                break;
+                break
             }
             break;
     }
