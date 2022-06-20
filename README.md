@@ -6,4 +6,4 @@ In this repository, i will apply all the learned in the javascript classes of co
 - permitir al usuario quitar cantidad de unidades del carrito (si)
 - hacer la suma total del precio del carrito y sumarle iva (si)
 - permitir hacer la compra en 3, 6 y 12 cuotas con las tazas de interes del 5%, 10%, y 20% respectivamente (si)
-- si el usuario teclea ESC o finaliza la compra terminara el ciclo ()
+- si el usuario teclea ESC o finaliza la compra terminara el ciclo (si)
