@@ -1,8 +1,9 @@
 class Juego {
-    constructor(id, nombre, precio) {
+    constructor(id, nombre, precio, cantidad) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
+        this.cantidad = cantidad;
     }
 }
 const sumar = (a, b) => a + b;
@@ -11,14 +12,10 @@ const multi = (a, b) => a * b;
 const div = (a, b) => a / b;
 const iva = a => a * 0.21; 
 const juegos = [];
-juegos.push(new Juego(1, "Call of Duty", 980));
-juegos.push(new Juego(2, "GTA", 550));
-juegos.push(new Juego(3, "La leyenda de mateo", 1500));
-juegos.push(new Juego(4, "Final Fantasy", 310));
-let cod = 0;
-let gta = 0;
-let leyen = 0;
-let ff = 0;
+juegos.push(new Juego(1, "Call of Duty", 980, 0));
+juegos.push(new Juego(2, "GTA", 550, 0));
+juegos.push(new Juego(3, "La leyemda de mateo", 1500, 0));
+juegos.push(new Juego(4, "Final Fantasy", 310, 0));
 let total = 0;
 let cantidadJuegos = 0;
 let entrada;
@@ -33,26 +30,26 @@ do {
                 switch(elegirJuegos) {
                     case 1:
                         unidades = parseInt(prompt(`¿Cuantas unidades del juego ${juegos[0].nombre} vas a llevar?`));
-                        cod = sumar(cod, unidades);
-                        cantidadJuegos = sumar(cantidadJuegos ,unidades);
+                        juegos[0].cantidad = sumar(juegos[0].cantidad, unidades);
+                        cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                         total = sumar(total, multi(unidades, juegos[0].precio));
                         break
                     case 2:
                         unidades = parseInt(prompt(`¿Cuantas unidades del juego ${juegos[1].nombre} vas a llevar?`));
-                        gta = sumar(gta, unidades);
-                        cantidadJuegos = sumar(cantidadJuegos ,unidades);
+                        juegos[1].cantidad = sumar(juegos[1].cantidad, unidades);
+                        cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                         total = sumar(total, multi(unidades, juegos[1].precio));
                         break
                     case 3:
                         unidades = parseInt(prompt(`¿Cuantas unidades del juego ${juegos[2].nombre} vas a llevar?`));
-                        leyen = sumar(leyen, unidades);
-                        cantidadJuegos = sumar(cantidadJuegos ,unidades);
+                        juegos[2].cantidad = sumar(juegos[2].cantidad, unidades);
+                        cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                         total = sumar(total, multi(unidades, juegos[2].precio));
                         break
                     case 4:
                         unidades = parseInt(prompt(`¿Cuantas unidades del juego ${juegos[3].nombre} vas a llevar?`));
-                        ff = sumar(ff, unidades);
-                        cantidadJuegos = sumar(cantidadJuegos ,unidades);
+                        juegos[3].cantidad = sumar(juegos[3].cantidad, unidades);
+                        cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                         total = sumar(total, multi(unidades, juegos[3].precio));
                         break;
                     default: 
@@ -62,16 +59,16 @@ do {
             break;
         case 2:
             while(elegirJuegos != 5) {
-                elegirJuegos = parseInt(prompt(`carrito: ${cantidadJuegos}\n¿Desea quitar algun juego del carrito?, seleccione cual y cuantos\n1.${juegos[0].nombre}       cantidad: ${cod}\n2.${juegos[1].nombre}       cantidad: ${gta}\n3.${juegos[2].nombre}       cantidad: ${leyen}\n4.${juegos[3].nombre}       cantidad: ${ff}\n5.Ingrese 5 para salir`));
+                elegirJuegos = parseInt(prompt(`carrito: ${cantidadJuegos}\n¿Desea quitar algun juego del carrito?, seleccione cual y cuantos\n1.${juegos[0].nombre}       cantidad: ${juegos[0].cantidad}\n2.${juegos[1].nombre}       cantidad: ${juegos[1].cantidad}\n3.${juegos[2].nombre}       cantidad: ${juegos[2].cantidad}\n4.${juegos[3].nombre}       cantidad: ${juegos[3].cantidad}\n5.Ingrese 5 para salir`));
                 switch(elegirJuegos) {
                     case 1:
-                        if (cod > 0) {
-                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[0].nombre} deseas eliminar    tienes: ${cod}`));
-                            if (unidades > cod) {
+                        if (juegos[0].cantidad > 0) {
+                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[0].nombre} deseas eliminar    tienes: ${juegos[0].cantidad}`));
+                            if (unidades > juegos[0].cantidad) {
                                 alert("No tienes esa cantidad de unidades");
-                            }else if (unidades <= cod) {
-                                cod = restar(cod, unidades);
-                                cantidadJuegos = restar(cantidadJuegos, unidades);
+                            }else if (unidades <= juegos[0].cantidad) {
+                                juegos[0].cantidad = restar(juegos[0].cantidad, unidades);
+                                cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                                 total = restar(total, multi(unidades, juegos[0].precio));
                             }
                         }else {
@@ -79,13 +76,13 @@ do {
                         }
                         break;
                     case 2:
-                        if (gta > 0) {
-                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[1].nombre} deseas eliminar    tienes: ${gta}`));
-                            if (unidades > gta) {
+                        if (juegos[1].cantidad > 0) {
+                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[1].nombre} deseas eliminar    tienes: ${juegos[1].cantidad}`));
+                            if (unidades > juegos[1].cantidad) {
                                 alert("No tienes esa cantidad de unidades");
-                            }else if (unidades <= gta) {
-                                gta = restar(gta, unidades);
-                                cantidadJuegos = restar(cantidadJuegos, unidades);
+                            }else if (unidades <= juegos[1].cantidad) {
+                                juegos[1].cantidad = restar(juegos[1].cantidad, unidades);
+                                cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                                 total = restar(total, multi(unidades, juegos[1].precio));
                             }
                         }else {
@@ -93,13 +90,13 @@ do {
                         }
                         break;
                     case 3:
-                        if (leyen > 0) {
-                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[2].nombre} deseas eliminar    tienes: ${leyen}`));
-                            if (unidades > leyen) {
+                        if (juegos[2].cantidad > 0) {
+                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[2].nombre} deseas eliminar    tienes: ${juegos[2].cantidad}`));
+                            if (unidades > juegos[2].cantidad) {
                                 alert("No tienes esa cantidad de unidades");
-                            }else if (unidades <= leyen) {
-                                leyen = restar(leyen, unidades);
-                                cantidadJuegos = restar(cantidadJuegos, unidades);
+                            }else if (unidades <= juegos[2].cantidad) {
+                                juegos[2].cantidad = restar(juegos[2].cantidad, unidades);
+                                cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                                 total = restar(total, multi(unidades, juegos[2].precio));
                             }
                         }else {
@@ -107,13 +104,13 @@ do {
                         }
                         break;
                     case 4:
-                        if (ff > 0) {
-                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[3].nombre} deseas eliminar    tienes: ${ff}`));
-                            if (unidades > ff) {
+                        if (juegos[3].cantidad > 0) {
+                            unidades = parseInt(prompt(`Cuantas unidades de ${juegos[3].nombre} deseas eliminar    tienes: ${juegos[3].cantidad}`));
+                            if (unidades > juegos[3].cantidad) {
                                 alert("No tienes esa cantidad de unidades");
-                            }else if (unidades <= ff) {
-                                ff = restar(ff, unidades);
-                                cantidadJuegos = restar(cantidadJuegos, unidades);
+                            }else if (unidades <= juegos[3].cantidad) {
+                                juegos[3].cantidad = restar(juegos[3].cantidad, unidades);
+                                cantidadJuegos = juegos.reduce((tot, el) => tot + el.cantidad, 0);
                                 total = restar(total, multi(unidades, juegos[3].precio));
                             }
                         }else {
@@ -130,7 +127,7 @@ do {
                 elegirJuegos = parseInt(prompt(`carrito: ${cantidadJuegos}\nSu precio total de videojuegos es de $${total}\nPresione:\n1.Seguir Comprando\n2.Finalizar compra.`));
                 switch(elegirJuegos) {
                     case 2:
-                        unidades = parseInt(prompt(`Usted esta llevando ${cantidadJuegos} Juegos por $${total}\n${juegos[0].nombre} X ${cod}: $${multi(cod, juegos[0].precio)}\n${juegos[1].nombre} X ${gta}: $${multi(gta, juegos[1].precio)}\n${juegos[2].nombre} X ${leyen}: $${multi(leyen, juegos[2].precio)}\n${juegos[3].nombre} X ${ff}: $${multi(ff, juegos[3].precio)}\niva: $${iva(total).toFixed(2)}\nTotal con iva $${sumar(total, iva(total)).toFixed(2)}\nPresione:\n1.Realizar la compra en un pago\n2.Realizar la compra en 3 cuotas con 5% de interes\n3.Realizar la compra en 6 cuotas con 10% de interes\n4.Realizar la compra en 12 cuotas con 20% de interes`));
+                        unidades = parseInt(prompt(`Usted esta llevando ${cantidadJuegos} Juegos por $${total}\n${juegos[0].nombre} X ${juegos[0].cantidad}: $${multi(juegos[0].cantidad, juegos[0].precio)}\n${juegos[1].nombre} X ${juegos[1].cantidad}: $${multi(juegos[1].cantidad, juegos[1].precio)}\n${juegos[2].nombre} X ${juegos[2].cantidad}: $${multi(juegos[2].cantidad, juegos[2].precio)}\n${juegos[3].nombre} X ${juegos[3].cantidad}: $${multi(juegos[3].cantidad, juegos[3].precio)}\niva: $${iva(total).toFixed(2)}\nTotal con iva $${sumar(total, iva(total)).toFixed(2)}\nPresione:\n1.Realizar la compra en un pago\n2.Realizar la compra en 3 cuotas con 5% de interes\n3.Realizar la compra en 6 cuotas con 10% de interes\n4.Realizar la compra en 12 cuotas con 20% de interes`));
                         switch(unidades) {
                             case 1:
                                 alert(`Su total es de $${sumar(total, iva(total)).toFixed(2)}, ¡Gracias por su compra!`);
