@@ -19,6 +19,9 @@ juegos.push(new Juego(4, "Final Fantasy", 310, 0));
 let total = 0;
 let cantidadJuegos = 0;
 let entrada;
+let carrito = document.getElementById("carrito");
+let compra = false;
+let precio = 0;
 do {
     let elegirJuegos;
     let unidades;
@@ -132,18 +135,26 @@ do {
                             case 1:
                                 alert(`Su total es de $${sumar(total, iva(total)).toFixed(2)}, ¡Gracias por su compra!`);
                                 entrada = 4;
+                                compra = true;
+                                precio = sumar(total, iva(total)).toFixed(2);
                                 break;
                             case 2:
                                 alert(`Su total es de 3 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.05))), 3).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
                                 entrada = 4;
+                                compra = true;
+                                precio = div(sumar(total, sumar(iva(total), multi(total, 0.05))), 3).toFixed(2);
                                 break;
                             case 3:
                                 alert(`Su total es de 6 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.1))), 6).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
                                 entrada = 4;
+                                compra = true;
+                                precio = div(sumar(total, sumar(iva(total), multi(total, 0.1))), 3).toFixed(2);
                                 break;
                             case 4:
                                 alert(`Su total es de 12 cuotas de $${div(sumar(total, sumar(iva(total), multi(total, 0.2))), 12).toFixed(2)} ¡Gracias por comprar en Bit Era!`);
                                 entrada = 4;
+                                compra = true;
+                                precio = div(sumar(total, sumar(iva(total), multi(total, 0.2))), 3).toFixed(2);
                                 break;
                             default:
                                 break;
@@ -156,3 +167,11 @@ do {
             break;
     }
 }while(entrada != 4);
+let resumenFactura = document.querySelector("#resumen-factura");
+if(compra) {
+    let cuerpoResumen = document.querySelector("#cuerpo-resumen");
+    cuerpoResumen.remove();
+    let p = document.createElement("p");
+    p.innerText = `Has comprado ${cantidadJuegos} juegos por ${precio} pesos`;
+    resumenFactura.appendChild(p);
+}
