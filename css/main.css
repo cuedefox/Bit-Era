@@ -8844,6 +8844,14 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.css.map */
+@font-face {
+  font-family: minecraft;
+  src: url(../fonts/Minecraft.ttf); }
+
+@font-face {
+  font-family: bit;
+  src: url(../fonts/04B_30__.TTF); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -8856,24 +8864,31 @@ ul, ol {
   list-style: none; }
 
 h1 {
-  color: #E6A009; }
+  color: #E6A009;
+  font-family: minecraft; }
 
 h2 {
-  color: #E6A009; }
+  color: #E6A009;
+  font-family: bit; }
 
 h3 {
-  color: #E6A009; }
+  color: #E6A009;
+  font-family: bit; }
 
 h4 {
-  color: #E6A009; }
+  color: #E6A009;
+  font-family: bit; }
 
 h5 {
-  color: #E6A009; }
+  color: #E6A009;
+  font-family: bit; }
 
 h6 {
-  color: #E6A009; }
+  color: #E6A009;
+  font-family: bit; }
 
 footer {
+  display: grid;
   background-color: #0059ff; }
   footer .nav-footer {
     background-color: #002a79; }

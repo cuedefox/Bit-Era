@@ -1,5 +1,13 @@
 $color1: #0059ff;
 $color2: #E6A009;
+@font-face {
+    font-family: minecraft;
+    src: url(../fonts/Minecraft.ttf);
+}
+@font-face {
+    font-family: bit;
+    src: url(../fonts/04B_30__.TTF);
+}
 @mixin size($ancho, $alto) {
     width: $ancho;
     height: $alto;

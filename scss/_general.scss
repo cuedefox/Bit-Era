@@ -9,8 +9,13 @@ a {
 ul, ol {
     list-style: none;
 }
-@for $i from 1 through 6 {
+h1 {
+    color: $color2;
+    font-family: minecraft;
+}
+@for $i from 2 through 6 {
     h#{$i} {
         color: $color2;
+        font-family: bit;
     }
 } 
