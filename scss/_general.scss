@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: $color2 !important;
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+@for $i from 1 through 6 {
+    h#{$i} {
+        color: $color2;
+    }
+} 

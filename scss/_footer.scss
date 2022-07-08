@@ -1,0 +1,13 @@
+footer {
+    background-color: $color1;
+    .nav-footer {
+        background-color: #002a79;
+    }
+}.medios-de-pago {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    img {
+        @include size(5em, 3.5em);
+    }
+}
