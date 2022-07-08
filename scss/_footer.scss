@@ -8,6 +8,7 @@ footer {
     display: flex;
     flex-flow: wrap;
     align-items: center;
+    justify-content: center;
     img {
         @include size(5em, 3.5em);
     }

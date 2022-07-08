@@ -1,0 +1,34 @@
+body {
+    background-color: antiquewhite;
+}
+h2 {
+    font-size: 2em;
+    color: blue;
+}
+#carrito p {
+    font-weight: bolder;
+    font-size: 2em;
+}
+.juegos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.juego {
+    background-color: aqua;
+    padding: 3em;
+    border-radius: 1em;
+}
+.nombre {
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+.precio {
+    color: green;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+input {
+    width: 2em;
+    height: 1em;
+}
