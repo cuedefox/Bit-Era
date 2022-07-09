@@ -40,8 +40,7 @@ function agregarResumen() {
         if (juegos[i].carrito > 0) {
             let div = document.createElement("div");
             div.id = `resumen${i}`;
-            div.innerHTML = `<p>${juegos[i].nombre} (${juegos[i].carrito}) = ${juegos[i].carrito * juegos[i].precio}$</p>
-            <form id="quitar${i}"><button type="submit">Quitar</button></form>`;
+            div.innerHTML = `<p>${juegos[i].nombre} (${juegos[i].carrito}) = ${juegos[i].carrito * juegos[i].precio}$</p>`;
             productos.appendChild(div); 
         }
     }
