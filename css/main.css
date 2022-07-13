@@ -8887,6 +8887,16 @@ h6 {
   color: #e6a009;
   font-family: bit; }
 
+.whatsapp img {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 3em;
+  height: 3em;
+  transition: all 0.2s ease-in-out; }
+  .whatsapp img:hover {
+    filter: brightness(1.75); }
+
 nav {
   background-color: #0059ff; }
 
