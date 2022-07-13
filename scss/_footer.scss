@@ -4,20 +4,32 @@ footer {
     .nav-footer {
         background-color: #002a79;
     }
-}.medios-de-pago {
+}
+.nav-footer {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+        display: flex;
+        flex-flow: wrap;
+        li {
+            padding: 0.6em;
+        }
+    }
+}
+.medios-de-pago {
     display: flex;
     flex-flow: wrap;
     align-items: center;
     justify-content: center;
     img {
-        @include size(5em, 3.5em);
+        @include size(4em, 2.8em);
         padding: 0.3em;
     }
 }
 .copy {
-    font-weight: bold;
+    font-size: 0.8em;
     color: $color2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0.5em;
 }

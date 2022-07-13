@@ -8904,19 +8904,28 @@ footer {
   footer .nav-footer {
     background-color: #002a79; }
 
+.nav-footer {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .nav-footer ul {
+    display: flex;
+    flex-flow: wrap; }
+    .nav-footer ul li {
+      padding: 0.6em; }
+
 .medios-de-pago {
   display: flex;
   flex-flow: wrap;
   align-items: center;
   justify-content: center; }
   .medios-de-pago img {
-    width: 5em;
-    height: 3.5em;
+    width: 4em;
+    height: 2.8em;
     padding: 0.3em; }
 
 .copy {
-  font-weight: bold;
+  font-size: 0.8em;
   color: #e6a009;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  margin: 0.5em; }
