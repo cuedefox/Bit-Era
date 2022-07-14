@@ -8868,6 +8868,18 @@ h1 {
   font-family: minecraft; }
 
 h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.3em; }
+
+section {
+  margin: 1em; }
+
+main {
+  background-color: #ebebebe3; }
+
+h2 {
   color: #e6a009;
   font-family: bit; }
 
@@ -8897,8 +8909,46 @@ h6 {
   .whatsapp img:hover {
     filter: brightness(1.75); }
 
+.productos {
+  margin: 1em;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.producto {
+  border-radius: 0.4em;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
+  .producto button {
+    margin-bottom: 0.3em;
+    border: 0;
+    border-radius: 1em;
+    padding: 0.4em;
+    font-weight: bold;
+    color: #0059ff;
+    background-color: #e6a009;
+    transition: all 0.2s ease-in-out; }
+    .producto button:hover {
+      color: #e6a009;
+      background-color: #0059ff; }
+  .producto .precio {
+    color: green;
+    font-weight: bold; }
+  .producto img {
+    width: 11em;
+    height: 13em;
+    margin: 0.5em; }
+
 nav {
   background-color: #0059ff; }
+  nav .nav-item a {
+    font-size: 1.3em; }
+  nav .navbar-toggler {
+    background-color: #e6a009; }
 
 #carousel h5 {
   font-size: 2em;
@@ -8912,7 +8962,7 @@ footer {
   display: grid;
   background-color: #0059ff; }
   footer .nav-footer {
-    background-color: #002a79; }
+    background-color: #003cac; }
 
 .nav-footer {
   font-weight: bold;
@@ -8939,3 +8989,16 @@ footer {
   font-size: 0.8em;
   color: #e6a009;
   margin: 0.5em; }
+
+.medio-de-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e6a009;
+  font-size: 1.3em; }
+  .medio-de-contacto img {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    bottom: 0.3em;
+    right: 0.2em; }

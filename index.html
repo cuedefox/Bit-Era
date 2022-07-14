@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -27,22 +27,26 @@
               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Categorias
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="pages/catalogo.html">Todos los productos</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
                 <li><a class="dropdown-item" href="pages/catalogo.html">Consolas</a></li>
                 <li><a class="dropdown-item" href="pages/catalogo.html">Videojuegos</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
                 <li><a class="dropdown-item" href="pages/catalogo.html">Juegos de Accion</a></li>
                 <li><a class="dropdown-item" href="pages/catalogo.html">Juegos Rpg</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="pages/faq.html">faq</a>
+              <a class="nav-link" aria-current="page" href="pages/faq.html">faq</a>
             </li>
           </ul>
           <a class="navbar-brand" href="pages/carrito.html">
@@ -58,7 +62,7 @@
     </nav>
   </header>
   <main>
-    <section id="carousel">
+    <div id="carousel">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -102,12 +106,20 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </section>
+    </div>
     <section id="consolas">
-      <h2>Elegi tu consola para Jugar</h2>
+      <h2>Elegi tu consola</h2>
+      <div class="productos">
+        <div class="producto">
+          <img src="img/psp.jpg" alt="imagen psp">
+          <h5>PSP</h5>
+          <p><span class="precio">30000$</span></p>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
     </section>
     <section id="juegos">
-      <h2>Encontra aca tus juegos favoritos</h2>
+      <h2>Encontra tus juegos favoritos</h2>
       <div>
         <h3>Ultimos lanzamientos</h3>
       </div>
@@ -116,7 +128,7 @@
       </div>
     </section>
     <section id="destacados">
-      <h2>Encontra aca los productos destacados</h2>
+      <h2>Productos destacados</h2>
     </section>
   </main>
   <footer>
@@ -136,6 +148,20 @@
         </li>
       </ul>
     </div>
+    <div class="contacto">
+      <div class="medio-de-contacto">
+        <img src="img/cursor.svg" alt="Icono de ubicacion">
+        <p>Av. siempre viva 742</p>
+      </div>
+      <div class="medio-de-contacto">
+        <img src="img/phone.svg" alt="Icono de telefono">
+        <p>11 1111-1111</p>
+      </div>
+      <div class="medio-de-contacto">
+        <img src="img/envelope.svg" alt="Icono de mail">
+        <p>contacto@bitera.com</p>
+      </div>
+    </div>
     <div class="medios-de-pago">
       <img src="img/medio-de-pago-visa.png" alt="medio de pago visa">
       <img src="img/medio-de-pago-mastercard.png" alt="medio de pago mastercard">
@@ -148,16 +174,15 @@
       <img src="img/medio-de-pago-pagofacil.png" alt="medio de pago pago facil">
       <img src="img/medio-de-pago-rapipago.png" alt="medio de pago rapipago">
     </div>
-    <div class="contacto">
-    </div>
     <div class="copy">
-      <p>&copyBit Era 2022 - All rights reserved.<br>Los precios expresados incluyen IVA. Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock.
+      <p>&copyBit Era 2022 - All rights reserved.<br>Los precios expresados incluyen IVA. Las fotos son a modo
+        ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock.
         Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.</p>
     </div>
   </footer>
   <div class="whatsapp">
     <a href="https://wa.me/message/NA6QMLWHQWMJM1" target="_blank">
-        <img src="img/whatsapp.png" alt="logo de whatsapp">
+      <img src="img/whatsapp.png" alt="logo de whatsapp">
     </a>
   </div>
   <script src="js/main.js"></script>
