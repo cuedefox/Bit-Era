@@ -1,4 +1,35 @@
 let productos = [];
+let agregar0;
+let agregar1;
+let agregar2;
+let agregar3;
+let agregar4;
+let agregar5;
+let agregar6;
+let agregar7;
+let agregar8;
+let agregar9;
+let agregar10;
+let agregar11;
+let agregar12;
+let agregar13;
+let agregar14;
+let agregar15;
+let agregar16;
+let agregar17;
+let agregar18;
+let agregar19;
+let agregar20;
+let agregar21;
+let agregar22;
+let agregar23;
+let agregar24;
+let agregar25;
+let agregar26;
+let agregar27;
+let agregar28;
+let agregar29;
+let agregar30;
 let carrito = {cantidad: 0, suma: 0, juegos: {}, cantidadjuegos: {}};
 const consolasDom = document.querySelector("#consolas");
 const ultimosLanzamientosDom = document.querySelector("#ultimosLanzamientos");
@@ -20,7 +51,37 @@ class producto {
 
 function inicializarElementos() {
     carritoDom = document.querySelector("#carrito");
-    
+    agregar0 = document.querySelector("#agregar0");
+    agregar1 = document.querySelector("#agregar1");
+    agregar2 = document.querySelector("#agregar2");
+    agregar3 = document.querySelector("#agregar3");
+    agregar4 = document.querySelector("#agregar4");
+    agregar5 = document.querySelector("#agregar5");
+    agregar6 = document.querySelector("#agregar6");
+    agregar7 = document.querySelector("#agregar7");
+    agregar8 = document.querySelector("#agregar8");
+    agregar9 = document.querySelector("#agregar9");
+    agregar10 = document.querySelector("#agregar10");
+    agregar11 = document.querySelector("#agregar11");
+    agregar12 = document.querySelector("#agregar12");
+    agregar13 = document.querySelector("#agregar13");
+    agregar14 = document.querySelector("#agregar14");
+    agregar15 = document.querySelector("#agregar15");
+    agregar16 = document.querySelector("#agregar16");
+    agregar17 = document.querySelector("#agregar17");
+    agregar18 = document.querySelector("#agregar18");
+    agregar19 = document.querySelector("#agregar19");
+    agregar20 = document.querySelector("#agregar20");
+    agregar21 = document.querySelector("#agregar21");
+    agregar22 = document.querySelector("#agregar22");
+    agregar23 = document.querySelector("#agregar23");
+    agregar24 = document.querySelector("#agregar24");
+    agregar25 = document.querySelector("#agregar25");
+    agregar26 = document.querySelector("#agregar26");
+    agregar27 = document.querySelector("#agregar27");
+    agregar28 = document.querySelector("#agregar28");
+    agregar29 = document.querySelector("#agregar29");
+    agregar30 = document.querySelector("#agregar30");
 }
 
 function inicializarProductos() {
@@ -122,10 +183,15 @@ function mostrarProductos() {
     filtrarProductos("producto", destacadosDom, destacados, 3);
 }
 
+function inicializarEventos() {
+
+}
+
 function main() {
     inicializarElementos();
     inicializarProductos();
     mostrarProductos();
+    inicializarEventos();
 }
 
 main();

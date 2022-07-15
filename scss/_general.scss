@@ -23,7 +23,7 @@ section {
     margin: 1em;
 }
 main {
-    background-color: #999999e3;
+    background-color: #e6e6e6e3;
 }
 @for $i from 2 through 6 {
     h#{$i} {
@@ -83,18 +83,22 @@ main {
         margin: 0.5em;
     }
 }
+.carrito-contenedor {
+    position: relative;
+}
 .carrito-fondo {
     @include size(1em, 1em);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     background-color: #ff0000;
     border-radius: 300em;
     padding: 0.6em;
     font-size: 0.6em;
+    left: 1.3em;
     p {
-        position: fixed;
-        top: 1.9em;
+        position: relative;
+        top: 0.6em;
     }
 }

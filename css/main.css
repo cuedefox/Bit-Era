@@ -8877,7 +8877,7 @@ section {
   margin: 1em; }
 
 main {
-  background-color: #999999e3; }
+  background-color: #e6e6e6e3; }
 
 h2 {
   color: #e6a009;
@@ -8947,20 +8947,24 @@ h6 {
     height: 13em;
     margin: 0.5em; }
 
+.carrito-contenedor {
+  position: relative; }
+
 .carrito-fondo {
   width: 1em;
   height: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   background-color: #ff0000;
   border-radius: 300em;
   padding: 0.6em;
-  font-size: 0.6em; }
+  font-size: 0.6em;
+  left: 1.3em; }
   .carrito-fondo p {
-    position: fixed;
-    top: 1.9em; }
+    position: relative;
+    top: 0.6em; }
 
 nav {
   background-color: #0059ff; }
