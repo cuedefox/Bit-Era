@@ -49,8 +49,18 @@ function filtrarProductos(tipo, dom, array, seccion) {
             }
         }
     }
-    if(seccion == "ultimos lanzamientos") {
-
+    if(seccion === "ultimos lanzamientos") {
+        array.sort((a, b) => {
+            if(a.año < b.año) {
+                return -1;
+            }
+            if(a.año > b.año) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        })
     }
     for(let i = 0; i < 8; i++) {
         let productoDom = document.createElement("div");
