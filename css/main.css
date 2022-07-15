@@ -8877,7 +8877,7 @@ section {
   margin: 1em; }
 
 main {
-  background-color: #ebebebe3; }
+  background-color: #999999e3; }
 
 h2 {
   color: #e6a009;
@@ -8917,6 +8917,8 @@ h6 {
   justify-content: center; }
 
 .producto {
+  width: 16em;
+  height: 25em;
   border-radius: 0.4em;
   background-color: white;
   display: flex;

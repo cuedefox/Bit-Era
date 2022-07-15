@@ -23,7 +23,7 @@ section {
     margin: 1em;
 }
 main {
-    background-color: #ebebebe3;
+    background-color: #999999e3;
 }
 @for $i from 2 through 6 {
     h#{$i} {
@@ -51,6 +51,7 @@ main {
     justify-content: center;
 }
 .producto {
+    @include size(16em, 25em);
     border-radius: 0.4em;
     background-color: white;
     display: flex;
