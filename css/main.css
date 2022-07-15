@@ -8922,7 +8922,9 @@ h6 {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 1em;
+  margin: 1em; }
   .producto button {
     margin-bottom: 0.3em;
     border: 0;

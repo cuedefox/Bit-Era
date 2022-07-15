@@ -1,7 +1,7 @@
 let productos = [];
 let carrito = {cantidad: 0, suma: 0};
 const consolasDom = document.querySelector("#consolas");
-const ultimosLanzamientosDom = document.querySelector("#juegos");
+const ultimosLanzamientosDom = document.querySelector("#ultimosLanzamientos");
 const masVendidosDom = document.querySelector("#masVendidos");
 const destacadosDom = document.querySelector("#destacados");
 class producto {
@@ -32,27 +32,48 @@ function inicializarProductos() {
     productos.push(new producto(11, "Metal Gear 2: solid snake", "juego", 299.99, 1990, "sigilo", "Konami", 0));
     productos.push(new producto(12, "Metal Gear solid", "juego", 1199.99, 1998, "sigilo", "Konami", 0));
     productos.push(new producto(13, "Metal Gear solid 2: sons of liberty", "juego", 599.99, 2001, "sigilo", "Konami", 0));
-    productos.push(new producto(14, "Metal Gear solid 3: snake eater (subsistence)", "juego", 599.99, 2006, "sigilo", "Konami", 0));
+    productos.push(new producto(14, "Metal Gear solid 3: snake eater (subsistence)", "juego", 599.99, 2006, "sigilo", "Konami", 5));
     productos.push(new producto(15, "Metal Gear solid portable ops", "juego", 499.99, 2006, "sigilo", "Konami", 0));
     productos.push(new producto(16, "Metal Gear solid 4: guns of the patriots", "juego", 799.99, 2008, "sigilo", "Konami", 0));
     productos.push(new producto(17, "Metal Gear solid peace walker", "juego", 499.99, 2010, "sigilo", "Konami", 0));
-    productos.push(new producto(18, "Metal Gear rising: revengance", "juego", 999.99, 2013, "accion", "Konami", 0));
-    productos.push(new producto(19, "Metal Gear solid 5: definitive experience", "juego", 1999.99, 2016, "sigilo", "Konami", 0));
-    
+    productos.push(new producto(18, "Metal Gear rising: revengance", "juego", 999.99, 2013, "accion", "Konami", 11));
+    productos.push(new producto(19, "Metal Gear solid 5: definitive experience", "juego", 1999.99, 2016, "sigilo", "Konami", 3));
+    productos.push(new producto(20, "La leyenda de Mateo", "juego", 0.00, 2020, "rpg", "cuede games", 460));
+}
+
+function filtrarProductos(tipo, dom, array, seccion) {
+    if(seccion != "destacados") {
+        for(let i = 0; i < productos.length; i++) {
+            if(productos[i].tipo == tipo) {
+             array.push(productos[i]);
+            }
+        }
+    }
+    if(seccion == "ultimos lanzamientos") {
+
+    }
+    for(let i = 0; i < 8; i++) {
+        let productoDom = document.createElement("div");
+        productoDom.className = "producto";
+        productoDom.innerHTML = `<img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}">
+        <h5>${array[i].nombre}</h5><p><span class="precio">${array[i].precio}</span></p>
+        <button id="agregar${array[i].id}">Agregar al carrito</button>`;
+        dom.appendChild(productoDom);
+    }
 }
 
 function mostrarProductos() {
     let productosConsolas = [];
-    for(let i = 0; i < productos.length; i++) {
-        if(productos[i].tipo == "consola") {
-            productosConsolas.push(productos[i]);
-        }
-    }
-    
+    let productosJuegosNuevos = [];
+    let productosJuegosMasVendidos = [];
+    filtrarProductos("consola", consolasDom, productosConsolas, "consola");
+    filtrarProductos("juego", ultimosLanzamientosDom, productosJuegosNuevos, "ultimos lanzamientos");
+    filtrarProductos("juego", masVendidosDom, productosJuegosMasVendidos, "mas cendidos");
 }
 
 function main() {
     inicializarProductos();
+    mostrarProductos();
 }
 
 main();
