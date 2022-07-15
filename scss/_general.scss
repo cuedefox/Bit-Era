@@ -83,3 +83,18 @@ main {
         margin: 0.5em;
     }
 }
+.carrito-fondo {
+    @include size(1em, 1em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #ff0000;
+    border-radius: 300em;
+    padding: 0.6em;
+    font-size: 0.6em;
+    p {
+        position: fixed;
+        top: 1.9em;
+    }
+}

@@ -1,9 +1,10 @@
 let productos = [];
-let carrito = {cantidad: 0, suma: 0};
+let carrito = {cantidad: 0, suma: 0, juegos: {}, cantidadjuegos: {}};
 const consolasDom = document.querySelector("#consolas");
 const ultimosLanzamientosDom = document.querySelector("#ultimosLanzamientos");
 const masVendidosDom = document.querySelector("#masVendidos");
 const destacadosDom = document.querySelector("#destacados");
+let carritoDom;
 class producto {
     constructor(id, nombre, tipo, precio, año, genero, desarrolladora, ventas) {
         this.id = id,
@@ -15,6 +16,11 @@ class producto {
         this.desarrolladora = desarrolladora,
         this.ventas = ventas
     }
+}
+
+function inicializarElementos() {
+    carritoDom = document.querySelector("#carrito");
+    
 }
 
 function inicializarProductos() {
@@ -101,6 +107,11 @@ function filtrarProductos(tipo, dom, array, seccion) {
 }
 
 function mostrarProductos() {
+    if(carrito.cantidad < 100) {
+        carritoDom.innerText = carrito.cantidad;
+    }else {
+        carritoDom.innerText = `99+`
+    }
     let productosConsolas = [];
     let productosJuegosNuevos = [];
     let productosJuegosMasVendidos = [];
@@ -112,6 +123,7 @@ function mostrarProductos() {
 }
 
 function main() {
+    inicializarElementos();
     inicializarProductos();
     mostrarProductos();
 }
