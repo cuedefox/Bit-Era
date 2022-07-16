@@ -30,7 +30,7 @@ let agregar27;
 let agregar28;
 let agregar29;
 let agregar30;
-let carrito = {cantidad: 0, suma: 0, juegos: {}, cantidadjuegos: {}};
+let carrito = {cantidad: 0, suma: 0, juegos: [], cantidadjuegos: {}};
 const consolasDom = document.querySelector("#consolas");
 const ultimosLanzamientosDom = document.querySelector("#ultimosLanzamientos");
 const masVendidosDom = document.querySelector("#masVendidos");
@@ -184,7 +184,130 @@ function mostrarProductos() {
 }
 
 function inicializarEventos() {
-
+    agregar0.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[0].precio;
+    }
+    agregar1.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[1].precio;
+    }
+    agregar2.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[2].precio;
+    }
+    agregar3.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[3].precio;
+    }
+    agregar4.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[4].precio;
+    }
+    agregar5.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[5].precio;
+    }
+    agregar6.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[6].precio;
+    }
+    agregar7.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[7].precio;
+    }
+    agregar8.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[8].precio;
+    }
+    agregar9.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[9].precio;
+    }
+    agregar10.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[10].precio;
+    }
+    agregar11.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[11].precio;
+    }
+    agregar12.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[12].precio;
+    }
+    agregar13.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[13].precio;
+    }
+    agregar14.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[14].precio;
+    }
+    agregar15.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[15].precio;
+    }
+    agregar16.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[16].precio;
+    }
+    agregar17.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[17].precio;
+    }
+    agregar18.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[18].precio;
+    }
+    agregar19.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[19].precio;
+    }
+    agregar20.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[20].precio;
+    }
+    agregar21.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[21].precio;
+    }
+    agregar22.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[22].precio;
+    }
+    agregar23.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[23].precio;
+    }
+    agregar24.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[24].precio;
+    }
+    agregar25.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[25].precio;
+    }
+    agregar26.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[26].precio;
+    }
+    agregar27.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[27].precio;
+    }
+    agregar28.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[28].precio;
+    }
+    agregar29.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[29].precio;
+    }
+    agregar30.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[30].precio;
+    }
 }
 
 function main() {
