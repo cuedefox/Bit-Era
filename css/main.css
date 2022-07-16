@@ -8939,20 +8939,21 @@ h6 {
     .producto button:hover {
       color: #e6a009;
       background-color: #0059ff; }
-  .producto .precio {
-    color: black;
-    font-weight: bold; }
   .producto img {
     width: 11em;
     height: 13em;
     margin: 0.5em; }
 
+.precio {
+  color: black;
+  font-weight: bold; }
+
 .carrito-contenedor {
   position: relative; }
 
 .carrito-fondo {
-  width: 1em;
-  height: 1em;
+  width: 1.7em;
+  height: 1.7em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8980,6 +8981,29 @@ nav {
 #carousel p {
   font-size: 1.4em;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
+
+.resumen-producto {
+  grid-area: producto; }
+
+.resumen-cuenta {
+  grid-area: cuenta; }
+
+.resumen-contenedor {
+  display: grid;
+  grid-template-areas: "productos" "cuenta"; }
+
+#comprar {
+  margin-bottom: 0.3em;
+  border: 0;
+  border-radius: 1em;
+  padding: 0.4em;
+  font-weight: bold;
+  color: #0059ff;
+  background-color: #e6a009;
+  transition: all 0.2s ease-in-out; }
+  #comprar:hover {
+    color: #e6a009;
+    background-color: #0059ff; }
 
 footer {
   display: grid;

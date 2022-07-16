@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Bit Era - catalogo</title>
+</head>
+
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <h1>Bit Era</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="catalogo.html">Todos los productos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="catalogo.html">Consolas</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Videojuegos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="catalogo.html">Juegos de Accion</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Juegos de Sigilo</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Juegos Rpg</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Juegos de Plataformas</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Juegos de Terror</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="faq.html">faq</a>
+            </li>
+          </ul>
+          <a class="navbar-brand carrito-contenedor" href="carrito.html">
+            <div class="carrito-fondo">
+              <p id="carrito"></p>
+            </div>
+            <img src="../img/cart.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Carrito
+          </a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+        <h2>Productos</h2>
+        <div class="productos" id="productos">
+            <div class="producto" id="producto">
+                <img src="../img/productos/0.jpg" alt="imagen Nintendo Switch">
+                <h5>Nintendo Switch</h5>
+                <p><span class="precio">119999.99$</span></p>
+                <button id="agregar0">Agregar al carrito</button>
+            </div>
+            <div class="producto" id="producto"><img src="../img/productos/1.jpg" alt="imagen PS 1">
+            <h5>PS 1</h5><p><span class="precio">29999.99$</span></p>
+            <button id="agregar1">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/2.jpg" alt="imagen Game boy color">
+            <h5>Game boy color</h5><p><span class="precio">82399.99$</span></p>
+            <button id="agregar2">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/3.jpg" alt="imagen PSP">
+            <h5>PSP</h5><p><span class="precio">29999.99$</span></p>
+            <button id="agregar3">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/4.jpg" alt="imagen XBOX">
+            <h5>XBOX</h5><p><span class="precio">69999.99$</span></p>
+            <button id="agregar4">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/5.jpg" alt="imagen DS Lite">
+            <h5>DS Lite</h5><p><span class="precio">19999.99$</span></p>
+            <button id="agregar5">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/6.jpg" alt="imagen PS 2">
+            <h5>PS 2</h5><p><span class="precio">39999.99$</span></p>
+            <button id="agregar6">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/7.jpg" alt="imagen PS 3">
+            <h5>PS 3</h5><p><span class="precio">54999.99$</span></p>
+            <button id="agregar7">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/8.jpg" alt="imagen PS 4">
+            <h5>PS 4</h5><p><span class="precio">89999.99$</span></p>
+            <button id="agregar8">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/9.jpg" alt="imagen PS 5">
+            <h5>PS 5</h5><p><span class="precio">249999.99$</span></p>
+            <button id="agregar9">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/10.jpg" alt="imagen Metal Gear">
+            <h5>Metal Gear</h5><p><span class="precio">299.99$</span></p>
+            <button id="agregar10">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/11.jpg" alt="imagen Metal Gear 2: solid snake">
+            <h5>Metal Gear 2: solid snake</h5><p><span class="precio">299.99$</span></p>
+            <button id="agregar11">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/12.jpg" alt="imagen Metal Gear solid">
+            <h5>Metal Gear solid</h5><p><span class="precio">1199.99$</span></p>
+            <button id="agregar12">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/13.jpg" alt="imagen Metal Gear solid 2: sons of liberty">
+            <h5>Metal Gear solid 2: sons of liberty</h5><p><span class="precio">599.99$</span></p>
+            <button id="agregar13">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/14.jpg" alt="imagen Metal Gear solid 3: snake eater (subsistence)">
+            <h5>Metal Gear solid 3: snake eater (subsistence)</h5><p><span class="precio">599.99$</span></p>
+            <button id="agregar14">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/15.jpg" alt="imagen Metal Gear solid portable ops">
+            <h5>Metal Gear solid portable ops</h5><p><span class="precio">499.99$</span></p>
+            <button id="agregar15">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/16.jpg" alt="imagen Metal Gear solid 4: guns of the patriots">
+            <h5>Metal Gear solid 4: guns of the patriots</h5><p><span class="precio">799.99$</span></p>
+            <button id="agregar16">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/17.jpg" alt="imagen Metal Gear solid peace walker">
+            <h5>Metal Gear solid peace walker</h5><p><span class="precio">499.99$</span></p>
+            <button id="agregar17">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/18.jpg" alt="imagen Metal Gear rising: revengance">
+            <h5>Metal Gear rising: revengance</h5><p><span class="precio">999.99$</span></p>
+            <button id="agregar18">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/19.jpg" alt="imagen Metal Gear solid 5: definitive experience">
+            <h5>Metal Gear solid 5: definitive experience</h5><p><span class="precio">1999.99$</span></p>
+            <button id="agregar19">Agregar al carrito</button></div><div class="producto" id="producto"><a href="https://play.google.com/store/apps/details?id=laleyendademateo.cuede&amp;hl=es_CO&amp;gl=US" target="_blank">
+                <img src="../img/productos/20.jpg" alt="imagen La leyenda de Mateo"></a>
+                <h5>La leyenda de Mateo</h5><p><span class="precio">0$</span></p>
+                <button id="agregar20">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/21.jpg" alt="imagen GTA V">
+            <h5>GTA V</h5><p><span class="precio">599.99$</span></p>
+            <button id="agregar21">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/22.jpg" alt="imagen COD BO1">
+            <h5>COD BO1</h5><p><span class="precio">299.99$</span></p>
+            <button id="agregar22">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/23.jpg" alt="imagen Final Fantasy">
+            <h5>Final Fantasy</h5><p><span class="precio">299.99$</span></p>
+            <button id="agregar23">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/24.jpg" alt="imagen Final Fantasy 2">
+            <h5>Final Fantasy 2</h5><p><span class="precio">299.99$</span></p>
+            <button id="agregar24">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/25.jpg" alt="imagen Star Wars 3">
+            <h5>Star Wars 3</h5><p><span class="precio">549.99$</span></p>
+            <button id="agregar25">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/26.jpg" alt="imagen The last of us">
+            <h5>The last of us</h5><p><span class="precio">849.99$</span></p>
+            <button id="agregar26">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/27.jpg" alt="imagen The last of us 2">
+            <h5>The last of us 2</h5><p><span class="precio">2999.99$</span></p>
+            <button id="agregar27">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/28.jpg" alt="imagen Crash Bandicoot Nsane trilogy">
+            <h5>Crash Bandicoot Nsane trilogy</h5><p><span class="precio">1849.99$</span></p>
+            <button id="agregar28">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/29.jpg" alt="imagen Silent Hill 2">
+            <h5>Silent Hill 2</h5><p><span class="precio">649.99$</span></p>
+            <button id="agregar29">Agregar al carrito</button></div><div class="producto" id="producto"><img src="../img/productos/30.jpg" alt="imagen Star Wars jedi fallen order">
+            <h5>Star Wars jedi fallen order</h5><p><span class="precio">2849.99$</span></p>
+            <button id="agregar30">Agregar al carrito</button></div>
+        </div>
+    </section>
+  </main>
+  <footer>
+    <div class="nav-footer">
+      <ul>
+        <li>
+          <a href="">Quienes somos</a>
+        </li>
+        <li>
+          <a href="">Garantia y devoluciones</a>
+        </li>
+        <li>
+          <a href="">Terminos y Condiciones</a>
+        </li>
+        <li>
+          <a href="">Politica de Privacidad</a>
+        </li>
+      </ul>
+    </div>
+    <div class="contacto">
+      <div class="medio-de-contacto">
+        <img src="../img/cursor.svg" alt="Icono de ubicacion">
+        <p>Av. siempre viva 742</p>
+      </div>
+      <div class="medio-de-contacto">
+        <img src="../img/phone.svg" alt="Icono de telefono">
+        <p>11 1111-1111</p>
+      </div>
+      <div class="medio-de-contacto">
+        <img src="../img/envelope.svg" alt="Icono de mail">
+        <p>contacto@bitera.com</p>
+      </div>
+    </div>
+    <div class="medios-de-pago">
+      <img src="../img/medio-de-pago-visa.png" alt="medio de pago visa">
+      <img src="../img/medio-de-pago-mastercard.png" alt="medio de pago mastercard">
+      <img src="../img/medio-de-pago-american.png" alt="medio de pago american express">
+      <img src="../img/medio-de-pago-banelco.png" alt="medio de pago banelco">
+      <img src="../img/medio-de-pago-cabal.png" alt="medio de pago cabal">
+      <img src="../img/medio-de-pago-mercadopago.png" alt="medio de pago mercado pago">
+      <img src="../img/medio-de-pago-naranja.png" alt="medio de pago naranja">
+      <img src="../img/medio-de-pago-nativa.png" alt="medio de pago nativa">
+      <img src="../img/medio-de-pago-pagofacil.png" alt="medio de pago pago facil">
+      <img src="../img/medio-de-pago-rapipago.png" alt="medio de pago rapipago">
+    </div>
+    <div class="copy">
+      <p>&copyBit Era 2022 - All rights reserved.<br>Los precios expresados incluyen IVA. Las fotos son a modo
+        ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock.
+        Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.</p>
+    </div>
+  </footer>
+  <div class="whatsapp">
+    <a href="https://wa.me/message/NA6QMLWHQWMJM1" target="_blank">
+      <img src="../img/whatsapp.png" alt="logo de whatsapp">
+    </a>
+  </div>
+  <script src="../js/catalogo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

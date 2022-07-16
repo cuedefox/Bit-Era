@@ -31,11 +31,16 @@ let agregar28;
 let agregar29;
 let agregar30;
 let carrito = {cantidad: 0, suma: 0};
-const consolasDom = document.querySelector("#consolas");
-const ultimosLanzamientosDom = document.querySelector("#ultimosLanzamientos");
-const masVendidosDom = document.querySelector("#masVendidos");
-const destacadosDom = document.querySelector("#destacados");
+const productosDom = document.querySelector("#productos");
 let carritoDom;
+
+class productoCarrito{
+    constructor(id, cantidad) {
+        this.id = id,
+        this.cantidad = cantidad;
+    }
+}
+
 class producto {
     constructor(id, nombre, tipo, precio, año, genero, desarrolladora, ventas) {
         this.id = id,
@@ -126,6 +131,11 @@ function obtenerCarritoLS() {
     actualizarCarrito();
 }
 
+function almacenarCarritoLS() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
+}
+
 function actualizarCarrito() {
     if(carrito.cantidad < 100) {
         carritoDom.innerText = carrito.cantidad;
@@ -134,76 +144,166 @@ function actualizarCarrito() {
     }
 }
 
-function filtrarProductos(tipo, dom, array, seccion) {
-    if(seccion != 3) {
-        for(let i = 0; i < productos.length; i++) {
-            if(productos[i].tipo == tipo) {
-             array.push(productos[i]);
-            }
-        }
-    }
-    if(seccion == 3) {
-        for(let i = 0; i < productos.length; i++) {
-            array.push(productos[i]);
-        }
-    }
-    if(seccion == 1) {
-        array.sort((a, b) => {
-            if(a.año < b.año) {
-                return 1;
-            }
-            if(a.año > b.año) {
-                return -1;
-            }
-            else {
-                return 0;
-            }
-        })
-    }
-    if(seccion == 0 || seccion >= 2) {
-        array.sort((a, b) => {
-            if(a.ventas < b.ventas) {
-                return 1;
-            }
-            if(a.ventas > b.ventas) {
-                return -1;
-            }
-            else {
-                return 0;
-            }
-        })
-    }
-    for(let i = 0; i < 8; i++) {
-        let crearProductoDom = document.createElement("div");
-        crearProductoDom.className = "producto";
-        crearProductoDom.id = "producto";
-        crearProductoDom.innerHTML = `<img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}">
-        <h5>${array[i].nombre}</h5><p><span class="precio">${array[i].precio}$</span></p>
-        <button id="agregar${array[i].id}">Agregar al carrito</button>`;
-        if(array[i].nombre === "La leyenda de Mateo") {
-            crearProductoDom.innerHTML = `<a href="https://play.google.com/store/apps/details?id=laleyendademateo.cuede&hl=es_CO&gl=US" target="_blank">
-            <img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}"></a>
-            <h5>${array[i].nombre}</h5><p><span class="precio">${array[i].precio}$</span></p>
-            <button id="agregar${array[i].id}">Agregar al carrito</button>`;
-        }
-        dom.appendChild(crearProductoDom);
-    }
-}
-
 function mostrarProductos() {
     obtenerCarritoLS();
-    let productosConsolas = [];
-    let productosJuegosNuevos = [];
-    let productosJuegosMasVendidos = [];
-    let destacados = [];
-    filtrarProductos("consola", consolasDom, productosConsolas, 0);
-    filtrarProductos("juego", ultimosLanzamientosDom, productosJuegosNuevos, 1);
-    filtrarProductos("juego", masVendidosDom, productosJuegosMasVendidos, 2);
-    filtrarProductos("producto", destacadosDom, destacados, 3);
 }
 
 function inicializarEventos() {
-
+    agregar0.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[0].precio;
+        almacenarCarritoLS();
+    }
+    agregar1.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[1].precio;
+        almacenarCarritoLS();
+    }
+    agregar2.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[2].precio;
+        almacenarCarritoLS();
+    }
+    agregar3.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[3].precio;
+        almacenarCarritoLS();
+    }
+    agregar4.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[4].precio;
+        almacenarCarritoLS();
+    }
+    agregar5.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[5].precio;
+        almacenarCarritoLS();
+    }
+    agregar6.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[6].precio;
+        almacenarCarritoLS();
+    }
+    agregar7.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[7].precio;
+        almacenarCarritoLS();
+    }
+    agregar8.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[8].precio;
+        almacenarCarritoLS();
+    }
+    agregar9.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[9].precio;
+        almacenarCarritoLS();
+    }
+    agregar10.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[10].precio;
+        almacenarCarritoLS();
+    }
+    agregar11.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[11].precio;
+        almacenarCarritoLS();
+    }
+    agregar12.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[12].precio;
+        almacenarCarritoLS();
+    }
+    agregar13.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[13].precio;
+        almacenarCarritoLS();
+    }
+    agregar14.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[14].precio;
+        almacenarCarritoLS();
+    }
+    agregar15.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[15].precio;
+        almacenarCarritoLS();
+    }
+    agregar16.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[16].precio;
+        almacenarCarritoLS();
+    }
+    agregar17.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[17].precio;
+        almacenarCarritoLS();
+    }
+    agregar18.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[18].precio;
+        almacenarCarritoLS();
+    }
+    agregar19.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[19].precio;
+        almacenarCarritoLS();
+    }
+    agregar20.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[20].precio;
+        almacenarCarritoLS();
+    }
+    agregar21.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[21].precio;
+        almacenarCarritoLS();
+    }
+    agregar22.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[22].precio;
+        almacenarCarritoLS();
+    }
+    agregar23.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[23].precio;
+        almacenarCarritoLS();
+    }
+    agregar24.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[24].precio;
+        almacenarCarritoLS();
+    }
+    agregar25.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[25].precio;
+        almacenarCarritoLS();
+    }
+    agregar26.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[26].precio;
+        almacenarCarritoLS();
+    }
+    agregar27.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[27].precio;
+        almacenarCarritoLS();
+    }
+    agregar28.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[28].precio;
+        almacenarCarritoLS();
+    }
+    agregar29.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[29].precio;
+        almacenarCarritoLS();
+    }
+    agregar30.onclick = () => {
+        carrito.cantidad++;
+        carrito.suma += productos[30].precio;
+        almacenarCarritoLS();
+    }
 }
 
 function main() {
