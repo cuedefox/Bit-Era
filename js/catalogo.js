@@ -103,7 +103,7 @@ function toastProducto(id) {
         text: `${productos[id].nombre} agregado al carrito`,
         duration: 1500,
         destination: "carrito.html",
-        newWindow: true,
+        newWindow: false,
         close: false,
         gravity: "bottom",
         position: "left",
