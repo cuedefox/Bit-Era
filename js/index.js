@@ -67,7 +67,7 @@ function toastProducto(id) {
     Toastify({
         text: `${productos[id].nombre} agregado al carrito`,
         duration: 1500,
-        destination: "carrito.html",
+        destination: "pages/carrito.html",
         newWindow: false,
         close: false,
         gravity: "bottom",
