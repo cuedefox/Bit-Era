@@ -54,8 +54,30 @@ function obtenerCarritoLS() {
     actualizarCarrito();
 }
 
+function almacenarCarritoLS() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
+}
+
 function actualizarCarrito() {
     carrito.cantidad < 100 ? (carritoDom.innerText = carrito.cantidad) : (carritoDom.innerText = `99+`);
+}
+
+function toastProducto(id) {
+    Toastify({
+        text: `${productos[id].nombre} agregado al carrito`,
+        duration: 1500,
+        destination: "carrito.html",
+        newWindow: false,
+        close: false,
+        gravity: "bottom",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #0059ff, #e6a009)",
+        },
+        onClick: function(){}
+      }).showToast();
 }
 
 function filtrarProductos(tipo, dom, array, seccion) {
@@ -98,17 +120,20 @@ function filtrarProductos(tipo, dom, array, seccion) {
     for(let i = 0; i < 8; i++) {
         let crearProductoDom = document.createElement("div");
         crearProductoDom.className = "producto";
-        crearProductoDom.id = "producto";
         crearProductoDom.innerHTML = `<img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}">
         <h5>${array[i].nombre}</h5><p><span class="precio">${array[i].precio}$</span></p>
-        <button id="agregar${array[i].id}">Agregar al carrito</button>`;
-        if(array[i].nombre === "La leyenda de Mateo") {
-            crearProductoDom.innerHTML = `<a href="https://play.google.com/store/apps/details?id=laleyendademateo.cuede&hl=es_CO&gl=US" target="_blank">
-            <img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}"></a>
-            <h5>${array[i].nombre}</h5><p><span class="precio">${array[i].precio}$</span></p>
-            <button id="agregar${array[i].id}">Agregar al carrito</button>`;
-        }
+        <button id="agregar-${array[i].id}-${seccion}">Agregar al carrito</button>`;
         dom.appendChild(crearProductoDom);
+    }
+    for(let i = 0; i < 8; i++) {
+        document.querySelector(`#agregar-${array[i].id}-${seccion}`).addEventListener("click", (e) => {
+            let juegoId = e.target.id.split("-")[1];
+            let juegoSeleccionado = productos.find(producto => producto.id == juegoId);
+            carrito.cantidad++;
+            carrito.suma += productos[juegoId].precio;
+            toastProducto(juegoId);
+            almacenarCarritoLS();
+        });
     }
 }
 
