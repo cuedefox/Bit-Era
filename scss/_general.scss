@@ -50,6 +50,20 @@ main {
     align-items: center;
     justify-content: center;
 }
+.swal2-confirm {
+    margin-bottom: 0.3em;
+    border: 0;
+    border-radius: 1em;
+    padding: 0.4em;
+    font-weight: bold;
+    color: $color1;
+    background-color: $color2;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        color: $color2;
+        background-color: $color1;
+    }
+}
 .producto {
     @include size(16em, 25em);
     border-radius: 0.4em;
@@ -61,18 +75,7 @@ main {
     padding: 1em;
     margin: 1em;
     button {
-        margin-bottom: 0.3em;
-        border: 0;
-        border-radius: 1em;
-        padding: 0.4em;
-        font-weight: bold;
-        color: $color1;
-        background-color: $color2;
-        transition: all 0.2s ease-in-out;
-        &:hover {
-            color: $color2;
-            background-color: $color1;
-        }
+        @extend .swal2-confirm;
     }
     img {
         @include size(11em, 13em);

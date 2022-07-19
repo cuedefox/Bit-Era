@@ -98,160 +98,208 @@ function mostrarProductos() {
     obtenerCarritoLS();
 }
 
+function toastProducto(id) {
+    Toastify({
+        text: `${productos[id].nombre} agregado al carrito`,
+        duration: 1500,
+        destination: "carrito.html",
+        newWindow: true,
+        close: false,
+        gravity: "bottom",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #0059ff, #e6a009)",
+        },
+        onClick: function(){}
+      }).showToast();
+}
+
 function inicializarEventos() {
     agregar0.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[0].precio;
+        toastProducto(0);
         almacenarCarritoLS();
     }
     agregar1.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[1].precio;
+        toastProducto(1);
         almacenarCarritoLS();
     }
     agregar2.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[2].precio;
+        toastProducto(2);
         almacenarCarritoLS();
     }
     agregar3.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[3].precio;
+        toastProducto(3);
         almacenarCarritoLS();
     }
     agregar4.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[4].precio;
+        toastProducto(4);
         almacenarCarritoLS();
     }
     agregar5.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[5].precio;
+        toastProducto(5);
         almacenarCarritoLS();
     }
     agregar6.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[6].precio;
+        toastProducto(6);
         almacenarCarritoLS();
     }
     agregar7.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[7].precio;
+        toastProducto(7);
         almacenarCarritoLS();
     }
     agregar8.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[8].precio;
+        toastProducto(8);
         almacenarCarritoLS();
     }
     agregar9.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[9].precio;
+        toastProducto(9);
         almacenarCarritoLS();
     }
     agregar10.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[10].precio;
+        toastProducto(10);
         almacenarCarritoLS();
     }
     agregar11.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[11].precio;
+        toastProducto(11);
         almacenarCarritoLS();
     }
     agregar12.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[12].precio;
+        toastProducto(12);
         almacenarCarritoLS();
     }
     agregar13.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[13].precio;
+        toastProducto(13);
         almacenarCarritoLS();
     }
     agregar14.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[14].precio;
+        toastProducto(14);
         almacenarCarritoLS();
     }
     agregar15.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[15].precio;
+        toastProducto(15);
         almacenarCarritoLS();
     }
     agregar16.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[16].precio;
+        toastProducto(16);
         almacenarCarritoLS();
     }
     agregar17.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[17].precio;
+        toastProducto(17);
         almacenarCarritoLS();
     }
     agregar18.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[18].precio;
+        toastProducto(18);
         almacenarCarritoLS();
     }
     agregar19.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[19].precio;
+        toastProducto(19);
         almacenarCarritoLS();
     }
     agregar20.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[20].precio;
+        toastProducto(20);
         almacenarCarritoLS();
     }
     agregar21.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[21].precio;
+        toastProducto(21);
         almacenarCarritoLS();
     }
     agregar22.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[22].precio;
+        toastProducto(22);
         almacenarCarritoLS();
     }
     agregar23.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[23].precio;
+        toastProducto(23);
         almacenarCarritoLS();
     }
     agregar24.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[24].precio;
+        toastProducto(24);
         almacenarCarritoLS();
     }
     agregar25.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[25].precio;
+        toastProducto(25);
         almacenarCarritoLS();
     }
     agregar26.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[26].precio;
+        toastProducto(26);
         almacenarCarritoLS();
     }
     agregar27.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[27].precio;
+        toastProducto(27);
         almacenarCarritoLS();
     }
     agregar28.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[28].precio;
+        toastProducto(28);
         almacenarCarritoLS();
     }
     agregar29.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[29].precio;
+        toastProducto(29);
         almacenarCarritoLS();
     }
     agregar30.onclick = () => {
         carrito.cantidad++;
         carrito.suma += productos[30].precio;
+        toastProducto(30);
         almacenarCarritoLS();
     }
 }

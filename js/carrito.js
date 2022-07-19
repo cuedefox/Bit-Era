@@ -63,15 +63,32 @@ function mostrarTotalCuenta() {
     const {cantidad, suma} = carrito;
     detallesResumenDom.innerHTML = `cantidad: <span class="precio">${cantidad}</span> productos<br>
     total sin iva: <span class="precio">${suma.toFixed(2)}</span>$<br>iva: <span class="precio">${(suma * 0.21).toFixed(2)}</span>$
-    <br>total con iva: <span class="precio">${(suma + (suma * 0.21)).toFixed(2)}</span>$` 
+    <br>total con iva: <span class="precio">${(suma + (suma * 0.21)).toFixed(2)}</span>$`
 }
 
 function inicializarEventos() {
     comprar.onclick = () => {
-        carrito = {cantidad: 0, suma: 0};
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        actualizarCarrito();
-        mostrarTotalCuenta();
+        if(carrito.cantidad > 0) {
+            carrito = {cantidad: 0, suma: 0};
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCarrito();
+            mostrarTotalCuenta();
+            Swal.fire({
+                icon: 'success',
+                color: '#e6a009',
+                title: 'Compra Exitosa',
+                text: 'Gracias por comprar con nosotros',
+                buttonsStyling: false
+              });
+        }else {
+            Swal.fire({
+                icon: 'info',
+                color: '#e6a009',
+                title: 'Carrito Vacio',
+                text: 'Agrega productos al carrito para poder comprar',
+                buttonsStyling: false
+              });
+        }
     }
 }
 
