@@ -13,37 +13,6 @@ class Producto {
 
 function inicializarElementos() {
     carritoDom = document.querySelector("#carrito");
-    agregar0 = document.querySelector("#agregar0");
-    agregar1 = document.querySelector("#agregar1");
-    agregar2 = document.querySelector("#agregar2");
-    agregar3 = document.querySelector("#agregar3");
-    agregar4 = document.querySelector("#agregar4");
-    agregar5 = document.querySelector("#agregar5");
-    agregar6 = document.querySelector("#agregar6");
-    agregar7 = document.querySelector("#agregar7");
-    agregar8 = document.querySelector("#agregar8");
-    agregar9 = document.querySelector("#agregar9");
-    agregar10 = document.querySelector("#agregar10");
-    agregar11 = document.querySelector("#agregar11");
-    agregar12 = document.querySelector("#agregar12");
-    agregar13 = document.querySelector("#agregar13");
-    agregar14 = document.querySelector("#agregar14");
-    agregar15 = document.querySelector("#agregar15");
-    agregar16 = document.querySelector("#agregar16");
-    agregar17 = document.querySelector("#agregar17");
-    agregar18 = document.querySelector("#agregar18");
-    agregar19 = document.querySelector("#agregar19");
-    agregar20 = document.querySelector("#agregar20");
-    agregar21 = document.querySelector("#agregar21");
-    agregar22 = document.querySelector("#agregar22");
-    agregar23 = document.querySelector("#agregar23");
-    agregar24 = document.querySelector("#agregar24");
-    agregar25 = document.querySelector("#agregar25");
-    agregar26 = document.querySelector("#agregar26");
-    agregar27 = document.querySelector("#agregar27");
-    agregar28 = document.querySelector("#agregar28");
-    agregar29 = document.querySelector("#agregar29");
-    agregar30 = document.querySelector("#agregar30");
 }
 
 function inicializarProductos() {
@@ -94,8 +63,34 @@ function actualizarCarrito() {
     carrito.cantidad < 100 ? (carritoDom.innerText = carrito.cantidad) : (carritoDom.innerText = `99+`);
 }
 
+function filtrarProductos(dom, array) {
+    for(let i = 0; i < productos.length; i++) {
+        array.push(productos[i]);
+    }
+    for(let i = 0; i < array.length; i++) {
+        let crearProductoDom = document.createElement("div");
+        crearProductoDom.className = "producto";
+        crearProductoDom.innerHTML = `<img src="../img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}">
+        <h5>${array[i].nombre}</h5><p><span class="precio">${array[i].precio}$</span></p>
+        <button id="agregar-${array[i].id}">Agregar al carrito</button>`;
+        dom.appendChild(crearProductoDom);
+    }
+    for(let i = 0; i < array.length; i++) {
+        document.querySelector(`#agregar-${array[i].id}`).addEventListener("click", (e) => {
+            let juegoId = e.target.id.split("-")[1];
+            let juegoSeleccionado = productos.find(producto => producto.id == juegoId);
+            carrito.cantidad++;
+            carrito.suma += productos[juegoId].precio;
+            toastProducto(juegoId);
+            almacenarCarritoLS();
+        });
+    }
+}
+
 function mostrarProductos() {
     obtenerCarritoLS();
+    let productosCatalogo = [];
+    filtrarProductos(productosDom, productosCatalogo);
 }
 
 function toastProducto(id) {
@@ -115,227 +110,7 @@ function toastProducto(id) {
       }).showToast();
 }
 
-function inicializarEventos() {
-    agregar0.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[0].precio;
-        toastProducto(0);
-        almacenarCarritoLS();
-    }
-    agregar1.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[1].precio;
-        toastProducto(1);
-        almacenarCarritoLS();
-    }
-    agregar2.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[2].precio;
-        toastProducto(2);
-        almacenarCarritoLS();
-    }
-    agregar3.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[3].precio;
-        toastProducto(3);
-        almacenarCarritoLS();
-    }
-    agregar4.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[4].precio;
-        toastProducto(4);
-        almacenarCarritoLS();
-    }
-    agregar5.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[5].precio;
-        toastProducto(5);
-        almacenarCarritoLS();
-    }
-    agregar6.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[6].precio;
-        toastProducto(6);
-        almacenarCarritoLS();
-    }
-    agregar7.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[7].precio;
-        toastProducto(7);
-        almacenarCarritoLS();
-    }
-    agregar8.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[8].precio;
-        toastProducto(8);
-        almacenarCarritoLS();
-    }
-    agregar9.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[9].precio;
-        toastProducto(9);
-        almacenarCarritoLS();
-    }
-    agregar10.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[10].precio;
-        toastProducto(10);
-        almacenarCarritoLS();
-    }
-    agregar11.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[11].precio;
-        toastProducto(11);
-        almacenarCarritoLS();
-    }
-    agregar12.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[12].precio;
-        toastProducto(12);
-        almacenarCarritoLS();
-    }
-    agregar13.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[13].precio;
-        toastProducto(13);
-        almacenarCarritoLS();
-    }
-    agregar14.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[14].precio;
-        toastProducto(14);
-        almacenarCarritoLS();
-    }
-    agregar15.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[15].precio;
-        toastProducto(15);
-        almacenarCarritoLS();
-    }
-    agregar16.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[16].precio;
-        toastProducto(16);
-        almacenarCarritoLS();
-    }
-    agregar17.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[17].precio;
-        toastProducto(17);
-        almacenarCarritoLS();
-    }
-    agregar18.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[18].precio;
-        toastProducto(18);
-        almacenarCarritoLS();
-    }
-    agregar19.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[19].precio;
-        toastProducto(19);
-        almacenarCarritoLS();
-    }
-    agregar20.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[20].precio;
-        toastProducto(20);
-        almacenarCarritoLS();
-    }
-    agregar21.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[21].precio;
-        toastProducto(21);
-        almacenarCarritoLS();
-    }
-    agregar22.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[22].precio;
-        toastProducto(22);
-        almacenarCarritoLS();
-    }
-    agregar23.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[23].precio;
-        toastProducto(23);
-        almacenarCarritoLS();
-    }
-    agregar24.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[24].precio;
-        toastProducto(24);
-        almacenarCarritoLS();
-    }
-    agregar25.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[25].precio;
-        toastProducto(25);
-        almacenarCarritoLS();
-    }
-    agregar26.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[26].precio;
-        toastProducto(26);
-        almacenarCarritoLS();
-    }
-    agregar27.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[27].precio;
-        toastProducto(27);
-        almacenarCarritoLS();
-    }
-    agregar28.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[28].precio;
-        toastProducto(28);
-        almacenarCarritoLS();
-    }
-    agregar29.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[29].precio;
-        toastProducto(29);
-        almacenarCarritoLS();
-    }
-    agregar30.onclick = () => {
-        carrito.cantidad++;
-        carrito.suma += productos[30].precio;
-        toastProducto(30);
-        almacenarCarritoLS();
-    }
-}
-
 let productos = [];
-let agregar0;
-let agregar1;
-let agregar2;
-let agregar3;
-let agregar4;
-let agregar5;
-let agregar6;
-let agregar7;
-let agregar8;
-let agregar9;
-let agregar10;
-let agregar11;
-let agregar12;
-let agregar13;
-let agregar14;
-let agregar15;
-let agregar16;
-let agregar17;
-let agregar18;
-let agregar19;
-let agregar20;
-let agregar21;
-let agregar22;
-let agregar23;
-let agregar24;
-let agregar25;
-let agregar26;
-let agregar27;
-let agregar28;
-let agregar29;
-let agregar30;
 let carrito;
 const productosDom = document.querySelector("#productos");
 let carritoDom;
@@ -344,7 +119,6 @@ function main() {
     inicializarElementos();
     inicializarProductos();
     mostrarProductos();
-    inicializarEventos();
 }
 
 main();
