@@ -47,6 +47,12 @@ function inicializarProductos() {
     productos.push(new Producto(28, "Crash Bandicoot Nsane trilogy", "juego", 1849.99, 2017, "plataformas", "naughty dog", 23));
     productos.push(new Producto(29, "Silent Hill 2", "juego", 649.99, 2001, "terror", "konami", 66));
     productos.push(new Producto(30, "Star Wars jedi fallen order", "juego", 2849.99, 2019, "accion", "electronic arts", 2));
+    productos.push(new Producto(31, "Time Crisis: Project Titan", "juego", 299.99, 2001, "accion", "namco", 4));
+    productos.push(new Producto(32, "star wars knights of the old republic", "juego", 329.99, 2003, "rpg", "bioware", 12));
+    productos.push(new Producto(33, "The Elder Scrolls IV: Oblivion", "juego", 789.99, 2006, "rpg", "bethesda", 31));
+    productos.push(new Producto(34, "The Elder Scrolls V: Skyrim", "juego", 999.99, 2011, "rpg", "bethesda", 54));
+    productos.push(new Producto(35, "Star Wars Battlefront II", "juego", 2999.99, 2017, "accion", "electronic arts", 7));
+    productos.push(new Producto(36, "El padrino", "juego", 99.99, 2006, "accion", "electronic arts", 97));
 }
 
 function obtenerCarritoLS() {
