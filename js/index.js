@@ -4,7 +4,7 @@ function inicializarElementos() {
 
 async function obtenerProductosJson() {
     try {
-        const response = await fetch("../data/productos.json");
+        const response = await fetch("https://62e5aceede23e26379229493.mockapi.io/productos");
         const data = await response.json();
         for (item of data) {
             productos.push(item);
