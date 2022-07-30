@@ -1,5 +1,5 @@
 [
-    {
+  {
       "id": 0,
       "nombre": "Nintendo Switch",
       "tipo": "consola",
@@ -8,8 +8,8 @@
       "genero": "consola",
       "desarrolladora": "Nintendo",
       "ventas": 143
-    },
-    {
+  },
+  {
       "id": 1,
       "nombre": "PS 1",
       "tipo": "consola",
@@ -18,8 +18,8 @@
       "genero": "consola",
       "desarrolladora": "Sony",
       "ventas": 1
-    },
-    {
+  },
+  {
       "id": 2,
       "nombre": "Game boy color",
       "tipo": "consola",
@@ -28,8 +28,8 @@
       "genero": "consola",
       "desarrolladora": "Nintendo",
       "ventas": 32
-    },
-    {
+  },
+  {
       "id": 3,
       "nombre": "PSP",
       "tipo": "consola",
@@ -38,8 +38,8 @@
       "genero": "consola",
       "desarrolladora": "Sony",
       "ventas": 115
-    },
-    {
+  },
+  {
       "id": 4,
       "nombre": "XBOX",
       "tipo": "consola",
@@ -48,8 +48,8 @@
       "genero": "consola",
       "desarrolladora": "Microsoft",
       "ventas": 3
-    },
-    {
+  },
+  {
       "id": 5,
       "nombre": "DS Lite",
       "tipo": "consola",
@@ -58,8 +58,8 @@
       "genero": "consola",
       "desarrolladora": "Nintendo",
       "ventas": 7
-    },
-    {
+  },
+  {
       "id": 6,
       "nombre": "PS 2",
       "tipo": "consola",
@@ -68,8 +68,8 @@
       "genero": "consola",
       "desarrolladora": "Sony",
       "ventas": 298
-    },
-    {
+  },
+  {
       "id": 7,
       "nombre": "PS 3",
       "tipo": "consola",
@@ -78,8 +78,8 @@
       "genero": "consola",
       "desarrolladora": "Sony",
       "ventas": 2
-    },
-    {
+  },
+  {
       "id": 8,
       "nombre": "PS 4",
       "tipo": "consola",
@@ -88,8 +88,8 @@
       "genero": "consola",
       "desarrolladora": "Sony",
       "ventas": 75
-    },
-    {
+  },
+  {
       "id": 9,
       "nombre": "PS 5",
       "tipo": "consola",
@@ -98,8 +98,8 @@
       "genero": "consola",
       "desarrolladora": "Sony",
       "ventas": 38
-    },
-    {
+  },
+  {
       "id": 10,
       "nombre": "Metal Gear",
       "tipo": "juego",
@@ -108,8 +108,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 11,
       "nombre": "Metal Gear 2: solid snake",
       "tipo": "juego",
@@ -118,8 +118,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 12,
       "nombre": "Metal Gear solid",
       "tipo": "juego",
@@ -128,8 +128,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 13,
       "nombre": "Metal Gear solid 2: sons of liberty",
       "tipo": "juego",
@@ -138,8 +138,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 14,
       "nombre": "Metal Gear solid 3: snake eater (subsistence)",
       "tipo": "juego",
@@ -148,8 +148,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 5
-    },
-    {
+  },
+  {
       "id": 15,
       "nombre": "Metal Gear solid portable ops",
       "tipo": "juego",
@@ -158,8 +158,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 16,
       "nombre": "Metal Gear solid 4: guns of the patriots",
       "tipo": "juego",
@@ -168,8 +168,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 17,
       "nombre": "Metal Gear solid peace walker",
       "tipo": "juego",
@@ -178,8 +178,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 0
-    },
-    {
+  },
+  {
       "id": 18,
       "nombre": "Metal Gear rising: revengance",
       "tipo": "juego",
@@ -188,8 +188,8 @@
       "genero": "accion",
       "desarrolladora": "Konami",
       "ventas": 11
-    },
-    {
+  },
+  {
       "id": 19,
       "nombre": "Metal Gear solid 5: definitive experience",
       "tipo": "juego",
@@ -198,8 +198,8 @@
       "genero": "sigilo",
       "desarrolladora": "Konami",
       "ventas": 3
-    },
-    {
+  },
+  {
       "id": 20,
       "nombre": "La leyenda de Mateo",
       "tipo": "juego",
@@ -208,8 +208,8 @@
       "genero": "rpg",
       "desarrolladora": "cuede games",
       "ventas": 460
-    },
-    {
+  },
+  {
       "id": 21,
       "nombre": "GTA V",
       "tipo": "juego",
@@ -218,8 +218,8 @@
       "genero": "accion",
       "desarrolladora": "rockstar",
       "ventas": 204
-    },
-    {
+  },
+  {
       "id": 22,
       "nombre": "COD BO1",
       "tipo": "juego",
@@ -228,8 +228,8 @@
       "genero": "accion",
       "desarrolladora": "treyarch",
       "ventas": 115
-    },
-    {
+  },
+  {
       "id": 23,
       "nombre": "Final Fantasy",
       "tipo": "juego",
@@ -238,8 +238,8 @@
       "genero": "rpg",
       "desarrolladora": "square enix",
       "ventas": 32
-    },
-    {
+  },
+  {
       "id": 24,
       "nombre": "Final Fantasy 2",
       "tipo": "juego",
@@ -248,8 +248,8 @@
       "genero": "rpg",
       "desarrolladora": "square enix",
       "ventas": 4
-    },
-    {
+  },
+  {
       "id": 25,
       "nombre": "Star Wars 3",
       "tipo": "juego",
@@ -258,8 +258,8 @@
       "genero": "accion",
       "desarrolladora": "lucas arts",
       "ventas": 47
-    },
-    {
+  },
+  {
       "id": 26,
       "nombre": "The last of us",
       "tipo": "juego",
@@ -268,8 +268,8 @@
       "genero": "accion",
       "desarrolladora": "naughty dog",
       "ventas": 200
-    },
-    {
+  },
+  {
       "id": 27,
       "nombre": "The last of us 2",
       "tipo": "juego",
@@ -278,8 +278,8 @@
       "genero": "accion",
       "desarrolladora": "naughty dog",
       "ventas": 53
-    },
-    {
+  },
+  {
       "id": 28,
       "nombre": "Crash Bandicoot Nsane trilogy",
       "tipo": "juego",
@@ -288,8 +288,8 @@
       "genero": "plataformas",
       "desarrolladora": "naughty dog",
       "ventas": 23
-    },
-    {
+  },
+  {
       "id": 29,
       "nombre": "Silent Hill 2",
       "tipo": "juego",
@@ -298,8 +298,8 @@
       "genero": "terror",
       "desarrolladora": "konami",
       "ventas": 66
-    },
-    {
+  },
+  {
       "id": 30,
       "nombre": "Star Wars jedi fallen order",
       "tipo": "juego",
@@ -308,5 +308,65 @@
       "genero": "accion",
       "desarrolladora": "electronic arts",
       "ventas": 2
-    }
-  ]
+  },
+  {
+      "id": 31,
+      "nombre": "Time Crisis: Project Titan",
+      "tipo": "juego",
+      "precio": 299.99,
+      "año": 2001,
+      "genero": "accion",
+      "desarrolladora": "namco",
+      "ventas": 4
+  },
+  {
+      "id": 32,
+      "nombre": "star wars knights of the old republic",
+      "tipo": "juego",
+      "precio": 329.99,
+      "año": 2003,
+      "genero": "rpg",
+      "desarrolladora": "bioware",
+      "ventas": 12
+  },
+  {
+      "id": 33,
+      "nombre": "The Elder Scrolls IV: Oblivion",
+      "tipo": "juego",
+      "precio": 789.99,
+      "año": 2006,
+      "genero": "rpg",
+      "desarrolladora": "bethesda",
+      "ventas": 31
+  },
+  {
+      "id": 34,
+      "nombre": "The Elder Scrolls V: Skyrim",
+      "tipo": "juego",
+      "precio": 999.99,
+      "año": 2011,
+      "genero": "rpg",
+      "desarrolladora": "bethesda",
+      "ventas": 54
+  },
+  {
+      "id": 35,
+      "nombre": "Star Wars Battlefront II",
+      "tipo": "juego",
+      "precio": 2999.99,
+      "año": 2017,
+      "genero": "accion",
+      "desarrolladora": "electronic arts",
+      "ventas": 7
+  },
+  {
+      "id": 36,
+      "nombre": "El padrino",
+      "tipo": "juego",
+      "precio": 99.99,
+      "año": 2006,
+      "genero": "accion",
+      "desarrolladora": "electronic arts",
+      "ventas": 97
+  }
+]
