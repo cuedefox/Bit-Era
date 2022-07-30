@@ -1,0 +1,48 @@
+footer {
+    display: grid;
+    background-color: $color1;
+    .nav-footer {
+        background-color: #003cac;
+    }
+}
+.nav-footer {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+        display: flex;
+        flex-flow: wrap;
+        li {
+            padding: 0.6em;
+        }
+    }
+}
+.medios-de-pago {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    img {
+        @include size(4em, 2.8em);
+        padding: 0.3em;
+    }
+}
+.copy {
+    font-size: 0.8em;
+    color: $color2;
+    margin: 0.5em;
+}
+.medio-de-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color2;
+    font-size: 1.3em;
+    img {
+        @include size(1em, 1em);
+        position: relative;
+        bottom: 0.3em;
+        right: 0.2em;
+    }
+}

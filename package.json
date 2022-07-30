@@ -1,0 +1,29 @@
+{
+  "name": "bit-era",
+  "version": "1.0.0",
+  "description": "In this repository, i will apply all the learned in the javascript course of coderhouse.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/import.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuedefox/Javascript-Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuedefox/Javascript-Learning/issues"
+  },
+  "homepage": "https://github.com/cuedefox/Javascript-Learning#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.4.23",
+    "toastify-js": "^1.11.2"
+  }
+}

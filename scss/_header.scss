@@ -1,0 +1,11 @@
+nav {
+    background-color: $color1;
+    .nav-item {
+        a {
+            font-size: 1.3em;
+        }
+    }
+    .navbar-toggler {
+        background-color: $color2;
+    }
+}
