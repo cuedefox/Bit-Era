@@ -2,24 +2,7 @@ function inicializarElementos() {
     carritoDom = document.querySelector("#carrito");
 }
 
-async function obtenerProductosJson() {
-    try {
-        const response = await fetch("https://62e5aceede23e26379229493.mockapi.io/productos");
-        const data = await response.json();
-        for (item of data) {
-            productos.push(item);
-        }
-        mostrarProductos();
-    } catch (error) {
-        Swal.fire({
-            icon: 'error',
-            color: '#e6a009',
-            title: 'Lo sentimos',
-            text: error,
-            buttonsStyling: false
-          });
-    }
-}
+
 
 function obtenerCarritoLS() {
     carrito = (JSON.parse(localStorage.getItem("carrito"))) ?? ({cantidad: 0, suma: 0});
