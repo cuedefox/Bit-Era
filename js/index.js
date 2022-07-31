@@ -89,7 +89,7 @@ function filtrarProductos(tipo, dom, array, seccion) {
             }
         })
     }
-    for(let i = 0; i < 8; i++) {
+    for(let i = 0; i < 4; i++) {
         let crearProductoDom = document.createElement("div");
         crearProductoDom.className = "producto";
         crearProductoDom.innerHTML = `<img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}">
@@ -97,7 +97,7 @@ function filtrarProductos(tipo, dom, array, seccion) {
         <button id="agregar-${array[i].id}-${seccion}">Agregar al carrito</button>`;
         dom.appendChild(crearProductoDom);
     }
-    for(let i = 0; i < 8; i++) {
+    for(let i = 0; i < 4; i++) {
         document.querySelector(`#agregar-${array[i].id}-${seccion}`).addEventListener("click", (e) => {
             let juegoId = e.target.id.split("-")[1];
             let juegoSeleccionado = productos.find(producto => producto.id == juegoId);

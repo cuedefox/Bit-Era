@@ -11,3 +11,16 @@
 .productos {
     background-image: url("../img/productos-back.jpg");
 }
+.categorias-juegos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        @include size(15em, 15em);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            filter: brightness(0.65);
+        }
+    }
+}

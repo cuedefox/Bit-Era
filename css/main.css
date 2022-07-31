@@ -143,6 +143,18 @@ nav {
 .productos {
   background-image: url("../img/productos-back.jpg"); }
 
+.categorias-juegos {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+  .categorias-juegos img {
+    width: 15em;
+    height: 15em;
+    transition: all 0.2s ease-in-out; }
+    .categorias-juegos img:hover {
+      filter: brightness(0.65); }
+
 .resumen-producto {
   grid-area: producto; }
 
@@ -210,3 +222,22 @@ footer {
     position: relative;
     bottom: 0.3em;
     right: 0.2em; }
+
+@media screen and (min-width: 768px) {
+  .categorias-juegos {
+    flex-flow: wrap; }
+    .categorias-juegos div {
+      padding: 1em; }
+      .categorias-juegos div img {
+        width: 13em;
+        height: 13em; } }
+
+@media screen and (min-width: 1024px) {
+  .categorias-juegos div img {
+    width: 17em;
+    height: 17em; } }
+
+@media screen and (min-width: 1360px) {
+  .categorias-juegos div img {
+    width: 24em;
+    height: 24em; } }
