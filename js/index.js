@@ -100,7 +100,6 @@ function filtrarProductos(tipo, dom, array, seccion) {
     for(let i = 0; i < 4; i++) {
         document.querySelector(`#agregar-${array[i].id}-${seccion}`).addEventListener("click", (e) => {
             let juegoId = e.target.id.split("-")[1];
-            let juegoSeleccionado = productos.find(producto => producto.id == juegoId);
             carrito.cantidad++;
             carrito.suma += productos[juegoId].precio;
             toastProducto(juegoId);
