@@ -1,6 +1,3 @@
-# Javascript-Learning
-In this repository, i will apply all the learned in the javascript classes of coderhouse.
-
 # Ideas desafio 1:
 - permitir al usuario elegir que juegos quiere comprar y la cantidad de unidades (si)
 - permitir al usuario quitar cantidad de unidades del carrito (si)
@@ -10,3 +7,6 @@ In this repository, i will apply all the learned in the javascript classes of co
 
 # Ideas desafio eventos (desafioeventos.html)
 -Incluir DOM: carrito, productos, carrito donde se pueden descartar los productos y pagar.
+
+# Resultado:
+Aprobado con la nota maxima.
