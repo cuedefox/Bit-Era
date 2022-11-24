@@ -89,7 +89,7 @@ function filtrarProductos(tipo, dom, array, seccion) {
             }
         })
     }
-    for(let i = 0; i < 4; i++) {
+    for(let i = 0; i < 8; i++) {
         let crearProductoDom = document.createElement("div");
         crearProductoDom.className = "producto";
         crearProductoDom.innerHTML = `<img src="img/productos/${array[i].id}.jpg" alt="imagen ${array[i].nombre}">
