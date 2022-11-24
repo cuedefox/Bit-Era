@@ -97,7 +97,7 @@ function filtrarProductos(tipo, dom, array, seccion) {
         <button id="agregar-${array[i].id}-${seccion}">Agregar al carrito</button>`;
         dom.appendChild(crearProductoDom);
     }
-    for(let i = 0; i < 4; i++) {
+    for(let i = 0; i < 8; i++) {
         document.querySelector(`#agregar-${array[i].id}-${seccion}`).addEventListener("click", (e) => {
             let juegoId = e.target.id.split("-")[1];
             carrito.cantidad++;
